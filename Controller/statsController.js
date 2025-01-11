@@ -3,7 +3,7 @@ import Currency from "../Modal/Store.js";
 const statsController=async(req,res)=>{
 
     try{
-    const coin = req.params.id;
+    const coin = req.params.coin;
     console.log(req.params);
 
     if (!coin) {

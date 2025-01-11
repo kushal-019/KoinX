@@ -17,7 +17,7 @@ function calculateStandardDeviation(arr) {
 
 const deviatonController = async (req, res) => {
   try {
-    const coin = req.params.id;
+    const coin = req.params.coin;
     console.log(coin);
 
     if (!coin) {

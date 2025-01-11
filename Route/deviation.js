@@ -3,6 +3,6 @@ import deviatonController from "../Controller/deviationController.js";
 
 const deviatonRouter = Router();
 
-deviatonRouter.get("/:id", deviatonController);
+deviatonRouter.get("/:coin", deviatonController);
 
 export default deviatonRouter;
