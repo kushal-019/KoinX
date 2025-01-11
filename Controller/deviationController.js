@@ -15,7 +15,7 @@ function calculateStandardDeviation(arr) {
   return standardDeviation;
 }
 
-const daviatonController = async (req, res) => {
+const deviatonController = async (req, res) => {
   try {
     const { coin } = req.body;
 
@@ -41,4 +41,4 @@ const daviatonController = async (req, res) => {
   }
 };
 
-export default daviatonController;
+export default deviatonController;

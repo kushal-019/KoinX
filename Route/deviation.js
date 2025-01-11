@@ -1,6 +1,8 @@
 import { Router } from "express";
-import daviatonController from "../Controller/deviationController";
+import deviatonController from "../Controller/deviationController";
 
-const daviatonRouter = Router();
+const deviatonRouter = Router();
 
-daviatonRouter.get("/", daviatonController);
+deviatonRouter.get("/", deviatonController);
+
+export default deviatonRouter;

@@ -4,3 +4,5 @@ import statsController from "../Controller/statsController";
 const statsRouter = Router();
 
 statsRouter.get("/", statsController);
+
+export default statsRouter;
