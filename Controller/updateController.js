@@ -1,10 +1,11 @@
-import Currency from "../Modal/Store";
+import Currency from "../Modal/Store.js";
 
 const updateCurrencies = async (cryptoData) => {
   try {
     for (const crypto of cryptoData) {
       // Destructure necessary fields from the API response
       const {
+        id,
         name,
         symbol,
         image,
@@ -19,6 +20,7 @@ const updateCurrencies = async (cryptoData) => {
       await Currency.findOneAndUpdate(
         { symbol },
         {
+          id : id,
           CryptoCurrencyName: name,
           symbol,
           image,
@@ -35,7 +37,7 @@ const updateCurrencies = async (cryptoData) => {
     }
     console.log("Database updated successfully!");
   } catch (error) {
-    console.error("Error updating database:", error.message);
+    console.log("Error updating database:", error.message);
   }
 };
 

@@ -25,8 +25,10 @@ cron.schedule("* */2 * * *", async() => {
   try {
     const response =await axios.get(process.env.API_URL);
     console.log(response.data)
-    updateCurrencies(data);
+    console.log("called")
+    updateCurrencies(response.data);
+    console.log("done")
   } catch (e) {
-    console.error("Error calling API:", error.message);
+    console.log("Error calling API:", e.message);
   }
 });

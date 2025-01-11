@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const currencySchema = new mongoose.Schema({
+  id: {
+    type: String,
+    required: true,
+  },
   CryptoCurrencyName: {
     type: String,
     required: true,
