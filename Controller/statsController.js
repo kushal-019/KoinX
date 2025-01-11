@@ -3,7 +3,8 @@ import Currency from "../Modal/Store.js";
 const statsController=async(req,res)=>{
 
     try{
-    const {coin} = req.body;
+    const coin = req.params.id;
+    console.log(req.params);
 
     if (!coin) {
         return res.status(400).json({ error: "Coin is required" });

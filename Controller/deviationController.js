@@ -17,7 +17,8 @@ function calculateStandardDeviation(arr) {
 
 const deviatonController = async (req, res) => {
   try {
-    const { coin } = req.body;
+    const coin = req.params.id;
+    console.log(coin);
 
     if (!coin) {
       return res.status(400).json({ error: "Coin is required" });

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import statsController from "../Controller/statsController";
+import statsController from "../Controller/statsController.js";
 
 const statsRouter = Router();
 
-statsRouter.get("/", statsController);
+statsRouter.get("/:id", statsController);
 
 export default statsRouter;
